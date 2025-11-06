@@ -6,7 +6,7 @@ public class ATM {
     }
 
     public void menu() {
-        System.out.println("\n1.  Check Balance");
+        System.out.println("\n\n1.  Check Balance");
         System.out.println("\n2.  Deposit");
         System.out.println("\n3.  Withdraw");
         System.out.println("\n4.  Exit");

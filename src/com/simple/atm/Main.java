@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int pinNum;
-        int userOption = 0;
+        int userOption;
 
-        //  Account account1 = new Account(5000, 1423);
+          SavingsAccount account1 = new SavingsAccount(5000, 1423, .05f);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,23 +15,24 @@ public class Main {
 
         pinNum = scanner.nextInt();
 
-      //  if(account1.validatePin((pinNum))) {
+        if(account1.validatePin((pinNum))) {
             do {
                 atm.menu();
                 userOption = scanner.nextInt();
                 switch (userOption) {
                     case 1:
-                      //  atm.checkBalance(account1.getBalance());
+                        System.out.printf("\nYour balance is $%2f ", account1.getBalance());
+                        System.out.printf("\nYour monthly interest earned is $%.2f ", account1.calculateInterest());
                         break;
                     case  2:
                         atm.depositMenu();
                         double depAmnt = scanner.nextDouble();
-                     //   account1.deposit(depAmnt);
+                        account1.deposit(depAmnt);
                         break;
                     case 3:
                         atm.withdrawMenu();
                         double withdrawAmount = scanner.nextDouble();
-                    //    account1.withdraw(withdrawAmount);
+                        account1.withdraw(withdrawAmount);
                         break;
 
                     case 4:
@@ -44,4 +45,4 @@ public class Main {
                 }            } while (userOption != 4);
 
         }    }
-//}
+}

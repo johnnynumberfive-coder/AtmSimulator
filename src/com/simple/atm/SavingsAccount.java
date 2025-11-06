@@ -2,7 +2,7 @@ package com.simple.atm;
 
 public class SavingsAccount extends Account{
 
-    private float interestRate;
+    private final float interestRate;
 
     public SavingsAccount(double bal, int pin, float interestRate) {
         super(bal, pin);
@@ -10,7 +10,6 @@ public class SavingsAccount extends Account{
     }
 
     public double calculateInterest() {
-        double interest = this.getBalance() * this.interestRate;
-        return interest;
+        return (this.getBalance() * interestRate)/12;
     }
 }
