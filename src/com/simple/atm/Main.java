@@ -7,7 +7,7 @@ public class Main {
         int pinNum;
         int userOption;
 
-          CheckingAccount account1 = new CheckingAccount(5000, 1423, 2f);
+          CheckingAccount account1 = new CheckingAccount(5000, 1423, 2);
 
         Scanner scanner = new Scanner(System.in);
 
