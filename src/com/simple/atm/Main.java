@@ -7,7 +7,7 @@ public class Main {
         int pinNum;
         int userOption = 0;
 
-        Account account1 = new Account(5000, 1423);
+        //  Account account1 = new Account(5000, 1423);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,23 +15,23 @@ public class Main {
 
         pinNum = scanner.nextInt();
 
-        if(account1.validatePin((pinNum))) {
+      //  if(account1.validatePin((pinNum))) {
             do {
                 atm.menu();
                 userOption = scanner.nextInt();
                 switch (userOption) {
                     case 1:
-                        atm.checkBalance(account1.getBalance());
+                      //  atm.checkBalance(account1.getBalance());
                         break;
                     case  2:
                         atm.depositMenu();
                         double depAmnt = scanner.nextDouble();
-                        account1.deposit(depAmnt);
+                     //   account1.deposit(depAmnt);
                         break;
                     case 3:
                         atm.withdrawMenu();
                         double withdrawAmount = scanner.nextDouble();
-                        account1.withdraw(withdrawAmount);
+                    //    account1.withdraw(withdrawAmount);
                         break;
 
                     case 4:
@@ -44,4 +44,4 @@ public class Main {
                 }            } while (userOption != 4);
 
         }    }
-}
+//}

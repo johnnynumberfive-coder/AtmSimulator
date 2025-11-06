@@ -1,6 +1,6 @@
 package com.simple.atm;
 
-public class Account implements Transactions{
+public abstract  class Account implements Transactions{
     private final int accountNUmber;
     private int pin;
     private double balance;
