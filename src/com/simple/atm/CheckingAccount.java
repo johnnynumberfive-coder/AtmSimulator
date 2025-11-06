@@ -10,6 +10,6 @@ public class CheckingAccount extends Account{
     }
 
     public double getFee() {
-        return this.getBalance() - fee;
+        return fee;
     }
 }
