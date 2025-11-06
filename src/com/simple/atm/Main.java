@@ -7,7 +7,7 @@ public class Main {
         int pinNum;
         int userOption;
 
-          SavingsAccount account1 = new SavingsAccount(5000, 1423, .05f);
+          CheckingAccount account1 = new CheckingAccount(5000, 1423, 2f);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -22,7 +22,7 @@ public class Main {
                 switch (userOption) {
                     case 1:
                         atm.checkBalance(account1.getBalance());
-                        System.out.printf("\nYour monthly interest earned is $%.2f ", account1.calculateInterest());
+                        //System.out.printf("\nYour monthly interest earned is $%.2f ", account1.calculateInterest());
                         break;
                     case  2:
                         atm.depositMenu();
@@ -32,7 +32,7 @@ public class Main {
                     case 3:
                         atm.withdrawMenu();
                         double withdrawAmount = scanner.nextDouble();
-                        account1.withdraw(withdrawAmount);
+                        account1.withdraw(withdrawAmount + account1.getFee());
                         break;
 
                     case 4:
