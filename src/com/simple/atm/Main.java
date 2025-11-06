@@ -35,13 +35,13 @@ public class Main {
                         break;
 
                     case 4:
+                        atm.exitMenu();
                         break;
 
                     default:
                         atm.invalidMenu();
 
                 }            } while (userOption != 4);
-            atm.exitMenu();
 
         }    }
 }
