@@ -21,7 +21,7 @@ public class Main {
                 userOption = scanner.nextInt();
                 switch (userOption) {
                     case 1:
-                        System.out.printf("\nYour balance is $%2f ", account1.getBalance());
+                        atm.checkBalance(account1.getBalance());
                         System.out.printf("\nYour monthly interest earned is $%.2f ", account1.calculateInterest());
                         break;
                     case  2:
